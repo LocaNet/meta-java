@@ -7,12 +7,12 @@ BBCLASSEXTEND = "native"
 inherit java-library
 
 SRC_URI = "\
-	https://github.com/downloads/mozilla/rhino/rhino1_7R4.zip \
+	https://github.com/mozilla/rhino/archive/Rhino1_7R4_RELEASE.zip \
 	file://rhino \
 	file://rhino-jsc \
 	"
 
-S = "${WORKDIR}/rhino1_7R4"
+S = "${WORKDIR}/rhino-Rhino1_7R4_RELEASE"
 
 PACKAGES = "${JPN} rhino"
 
@@ -42,5 +42,5 @@ do_install_append() {
 	install -m 0755 ${WORKDIR}/rhino-jsc ${D}${bindir}
 }
 
-SRC_URI[md5sum] = "ad67a3dff135e3a70f0c3528a2d6edf2"
-SRC_URI[sha256sum] = "9eb08f85bbe7c8e0b9eaffb1cf4984b31fb679f3c8a682acc3bb8ac20626c61e"
+SRC_URI[md5sum] = "d56e7ce505f96af1e00c5357e417177c"
+SRC_URI[sha256sum] = "8a22e019211f53f761061983c9047f4fe423e3266fd41c51d6f27d305ea2189c"
